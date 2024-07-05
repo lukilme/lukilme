@@ -1,5 +1,6 @@
-### potato
+<div align="center">
 
-hellow, nice and slow!💩
+![coisa](https://github-readme-stats.vercel.app/api/top-langs/?username=LuKilme&layout=compact&langs_count=10&theme=dark)
 
+</div>
 
