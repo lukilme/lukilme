@@ -6,29 +6,22 @@
 
 </div>
 
-
 ### What i'm studying actually:
-
-- Big Data, especially the Hadoop ecosystem: Because sometimes normal-sized data just __isn't big enough__. Hadoop is like a giant vacuum cleaner for data — if only it could also clean my room and my damaged mind.
-
-- Focus on Java API and application development: Java is like coffee — strong, reliable, and sometimes a little bitter. I'm diving into APIs and applications, but let's be honest: half of this is just figuring out which version of Java to use and whether there's a library that does in 1 line of code what takes me 300.
-
-- Graphic design: Learning how to make things look pretty. Turns out, just putting colorful text on images doesn't count as "design." Who knew?
-
-- Video maker: Editing videos and trying not to make every cut look like a cheesy transition from a 90s home video. One day, I'll master the art of not overusing cheesy filters and jump cuts.
-
-- Diving into data science and machine learning: because teaching computers to learn by themselves means less work for me in the future... right? Just waiting for the day when my code finally becomes self-aware and makes better decisions than me.
+- BigData, specially Hadoop ecosystem
+- Focus in Java development API and aplications
+- Graphic Design
+- VideoMaker 
+- Deeping in DataScience and Machine learning
 
 <hr>
 
 <div align="center">
 
-### Skills???
+## Skills???
 </div>
 
 I appreciate how people are often aware of their own abilities, even if they sometimes exaggerate them a bit—it's quite amusing!
 
-<hr>
 <div align="center">
 
 ### Data Science
@@ -44,11 +37,16 @@ Personally, I like data science because I like graphs. There's something magical
 
 - Matplotlib: The ultimate graphing tool that helps me pretend I’m an artist. It lets you turn numbers into beautiful pictures. Picasso? More like NumPy-casso! ~~Why don’t I have any friends?~~
 
+- SymPy: It deals with symbolic math. You know, for when you need to flex that algebra muscle and say, "I don't want approximations, I want the exact value of pi as a fraction of infinity."
+
+- SciPy: Think of SciPy as NumPy's super-gifted sibling that really likes calculus and solving differential equations and is possibly a virgin. If you need integrals, optimizations, or physics simulations, SciPy is your choice — because someone has to do the hard math, and it's not going to be me.
 <hr>
 <div align="center">
 
 ### Frontend
 </div>
+
+- Vue: Versatile and my go-to when I need something fast and efficient.
 
 - Angular: The main framework I use. Angular is like that well-organized friend who loves structure and rules — sometimes overwhelming, but you know everything will fall into place. Plus, it’s perfect when you want your app to feel like you’re running a tight ship.
 
@@ -64,9 +62,30 @@ Personally, I like data science because I like graphs. There's something magical
 
 - Java: My main weapon of choice for building APIs. Strong, versatile, and sometimes makes me question my life decisions with all those semicolons and curly braces.
 
+- Python: I know the basics for API creation. Python is like the friend who’s always chill—gets the job done with fewer lines of code and somehow makes it all look effortless. But let’s be real: I mostly use it when Java gives me a headache.
+
 - Postgres: My trusty main database. It’s like the reliable friend who always has your back with ACID compliance and complex queries. SQL never tasted so good.
 
 - MongoDB: Used occasionally, like a sidekick that doesn’t always follow the rules (NoSQL, am I right?). Sometimes, you just need that flexible, schema-free vibe.
+
+<div align="center">
+
+### What I am learning and what I learned in Software Engineering:
+</div>
+
+- Design Patterns: You know, those reusable solutions to common problems that make you feel like a coding Jedi. May the Singleton be with you. Except when it’s not the best idea (I’m looking at you, multithreading).
+
+- cClean Code: Writing code so clean that even Robert Martin would approve. “Does this variable name spark joy? If not, refactor it.”
+
+- Agile Methodologies: Moving fast, breaking things, and then fixing them in the next sprint. The daily standup is basically a 15-minute exercise in making yourself sound more productive than you actually are.
+
+- Version Control (Git): Learning how to manage the timeline of my code’s life… or undo the chaos when I inevitably break something. Git push is great; git revert is like going back in time to fix all my mistakes—both in code and in life.
+
+- Unit Testing: Writing tests for my code so I can catch bugs before they catch me. Testing is like flossing — everyone knows we should do it, but we all tend to skip it… until disaster strikes.
+
+- Microservices architecture: Because who doesn’t like splitting up a monolith and then spending the rest of their life debugging interactions between tiny services that refuse to play nice with each other like my relationship with my family?
+
+- Continuous integration/continuous deployment (CI/CD): Automating everything so I can just push a button and deploy code like a magician. The real trick is pretending everything works perfectly the first time — spoiler: it never does, and you’ll have to do it all over again.
 
 <hr>
 
