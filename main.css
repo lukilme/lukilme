@@ -17,7 +17,9 @@ a {
     font-size: 0.9em;
     transition: transform 0.3s ease;
 }
-
+li{
+    margin-left: 60px;
+}
 .language-tag:hover {
     transform: scale(1.05);
 }
