@@ -18,7 +18,7 @@ a {
     transition: transform 0.3s ease;
 }
 li{
-    margin-left: 60px;
+    margin-left: 20px;
 }
 .language-tag:hover {
     transform: scale(1.05);
@@ -32,7 +32,13 @@ li{
 * {
     margin: 0;
     padding: 0;
+    
     box-sizing: border-box;
+}
+
+.github_link{
+    padding: 20px 5px;
+    color:rgb(53, 127, 197)!important;
 }
 
 body {
@@ -202,8 +208,8 @@ body {
 .skill-tag {
     background: linear-gradient(45deg, #667eea, #764ba2);
     color: white;
-    
-    padding: 6px 12px;
+    font-size: medium;
+    padding: 4px 8px;
     border-radius: 5px;
     font-size: 0.95em;
     transition: transform 0.3s ease;
@@ -249,7 +255,7 @@ body {
 .school {
     color: #7f8c8d;
     font-style: italic;
-    height: 34px;
+    height: 25px;
 }
 
 .date {
@@ -264,8 +270,8 @@ body {
 
 .description {
     color: #555;
-    font-size: large;
-    line-height: 1.6;
+    font-size: medium;
+    line-height: 1.4;
 }
 
 .languages {
