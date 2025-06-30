@@ -257,7 +257,7 @@ body {
 .degree {
     font-weight: 600;
     color: #2c3e50;
-    font-size: 1.1em;
+    font-size: 1.2em;
 }
 
 .job-title {
@@ -276,7 +276,7 @@ body {
     color: white;
     padding: 2px 4px;
     border-radius: 5px;
-    font-size: 0.8em;
+    font-size: 0.9em;
     display: inline-block;
     margin-bottom: 5px;
 }
