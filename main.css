@@ -34,6 +34,11 @@ li{
     padding: 0;
     
 }
+
+img{
+    border:5px solid #3498db;
+    border-radius: 5px;
+}
 .pessoal_section{
     display: flex;
     flex-direction: row;
@@ -52,6 +57,10 @@ body {
     max-width: 1200px;
     margin:0px auto;
     margin-bottom: 40px;
+}
+
+.pessoal_section{
+    margin:10px;
 }
 
 .container {
