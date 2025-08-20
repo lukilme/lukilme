@@ -1,5 +1,16 @@
-# Vue 3 + TypeScript + Vite
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+<div align=center>
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+# Luis Kilmer
+
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=lukilme&layout=compact&langs_count=8&theme=dark)
+
+
+</div>
+
+
+
+
+
+| ![Top Langs](https://i.pinimg.com/originals/a5/43/7e/a5437ecc2ab152de7c0d69ed800af4a4.gif) | A lot of things fit in a void, especially a stick of dynamite.|
+|-------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
