@@ -6,7 +6,7 @@
    
 </script>
 <template>
-   <div id="app">
+   <div>
       <NavBar />
       <main>
          <section id="about">
