@@ -3,20 +3,24 @@
    import About from './components/About.vue'
    import NavBar from './components/Navbar.vue'
    import Project from './components/Project.vue'
+import Contact from './components/Contact.vue'
    
 </script>
 <template>
-   <div>
+   <div class="mx-auto my-15 py-20">
       <NavBar />
-      <main>
-         <section id="about">
+      <main >
+         <section id="homeview">
+            <HomeView />
+         </section>
+         <section id="sobre">
             <About />
          </section>
-         <section id="projects">
+         <section id="projetos">
             <Project />
          </section>
-         <section id="contact">
-            <HomeView />
+         <section id="contato">
+            <Contact />
          </section>
       </main>
    </div>
@@ -27,5 +31,9 @@
    }
    section{
     height: 400px;
+   }
+
+   #homeview{
+      margin:auto;
    }
 </style>
