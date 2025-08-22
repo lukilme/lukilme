@@ -1,46 +1,31 @@
 <template>
     <div class="flex items-center justify-center my-20 px-4">
-        <div class="w-full max-w-5xl relative">
-            <div class="h-[400px] border-8 border-black shadow-[16px_16px_0_#000] relative overflow-hidden transform hover:translate-x-2 hover:translate-y-2 hover:shadow-[8px_8px_0_#000] transition-all duration-200">
+        <div class="w-full max-w-6xl relative">
+            <div class="h-[500px] border-8 border-black shadow-[16px_16px_0_#000] relative overflow-hidden transform hover:translate-x-2 hover:translate-y-2 hover:shadow-[8px_8px_0_#000] transition-all duration-200">
                 <div class="flex transition-transform duration-500 ease-out h-full" :style="{ transform: `translateX(-${currentSlide * 100}%)` }">
-                    <div class="slide min-w-full flex flex-col items-center justify-center p-8 bg-gradient-to-br from-pink-400 via-pink-500 to-pink-600 border-r-8 border-black relative">
-                        <h2 class="text-4xl md:text-5xl font-black text-black mb-4 text-center transform -rotate-1">
-                            slide 1
-                        </h2>
-                        <p class="text-2xl font-bold text-black text-center bg-yellow-300 px-6 py-3 border-4 border-black shadow-[6px_6px_0_#000] transform rotate-1">
-                            titulo 1
-                        </p>
+                    <div class="slide min-w-full flex flex-col items-center justify-center p-8 bg-purple-400 border-r-8 border-black relative">
+                        
                     </div>
 
-                    <div class="slide min-w-full flex flex-col items-center justify-center p-8 bg-gradient-to-br from-yellow-400 via-yellow-500 to-orange-400 border-r-8 border-black relative">
-                        <h2 class="text-4xl md:text-5xl font-black text-black mb-4 text-center transform rotate-1">
-                            slide 2
-                        </h2>
-                        <p class="text-2xl font-bold text-black text-center bg-blue-300 px-6 py-3 border-4 border-black shadow-[6px_6px_0_#000] transform -rotate-1">
-                            titulo 2
-                        </p>
+                    <div class="slide min-w-full flex flex-col items-center justify-center p-8 bg-pink-400 border-r-8 border-black relative">
+                        
                     </div>
 
-                    <div class="slide min-w-full flex flex-col items-center justify-center p-8 bg-gradient-to-br from-blue-400 via-blue-500 to-purple-500 border-r-8 border-black relative">
-                        <h2 class="text-4xl md:text-5xl font-black text-black mb-4 text-center transform -rotate-1">
-                            slide 3
-                        </h2>
-                        <p class="text-2xl font-bold text-black text-center bg-green-300 px-6 py-3 border-4 border-black shadow-[6px_6px_0_#000] transform rotate-2">
-                            titulo 3
-                        </p>
+                    <div class="slide min-w-full flex flex-col items-center justify-center p-8 bg-cyan-400 border-r-8 border-black relative">
+                       
                     </div>
                 </div>
 
                 <button
                     @click="prevSlide"
-                    class="absolute top-1/2 -translate-y-1/2 left-6 px-6 py-4 border-6 border-black bg-white text-black shadow-[8px_8px_0_#000] font-black text-3xl hover:bg-pink-300 hover:shadow-[4px_4px_0_#000] hover:translate-x-1 transition-all duration-150 transform"
+                    class="absolute top-1/2 -translate-y-1/2 left-6 px-4 py-2 border-6 border-black bg-white text-black shadow-[8px_8px_0_#000] font-black text-3xl hover:bg-pink-300 hover:shadow-[4px_4px_0_#000] hover:translate-x-1 transition-all duration-150 transform"
                 >
                     ←
                 </button>
 
                 <button
                     @click="nextSlide"
-                    class="absolute top-1/2 -translate-y-1/2 right-6 px-6 py-4 border-6 border-black bg-white text-black shadow-[8px_8px_0_#000] font-black text-3xl hover:bg-yellow-300 hover:shadow-[4px_4px_0_#000] hover:translate-x-1 transition-all duration-150 transform"
+                    class="absolute top-1/2 -translate-y-1/2 right-6 px-4 py-2 border-6 border-black bg-white text-black shadow-[8px_8px_0_#000] font-black text-3xl hover:bg-yellow-300 hover:shadow-[4px_4px_0_#000] hover:translate-x-1 transition-all duration-150 transform"
                 >
                     →
                 </button>
