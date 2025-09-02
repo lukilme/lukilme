@@ -1,5 +1,5 @@
 <script setup lang="ts">
-   import HomeView from './components/HomeView.vue'
+   // import HomeView from './components/HomeView.vue'
    import About from './components/About.vue'
    import NavBar from './components/Navbar.vue'
    import Project from './components/Project.vue'
@@ -10,9 +10,9 @@ import Contact from './components/Contact.vue'
    <div class="mx-auto my-15 py-20">
       <NavBar />
       <main >
-         <section id="homeview" class="pb-10">
+         <!-- <section id="homeview" class="pb-10">
             <HomeView />
-         </section>
+         </section> -->
          <section id="sobre" class="py-10">
             <About />
          </section>

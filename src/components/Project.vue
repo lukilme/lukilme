@@ -1,5 +1,5 @@
 <template>
-    <h1>Project</h1>
+    <h2>Project</h2>
 </template>
 <script lang="ts">
 export default{
