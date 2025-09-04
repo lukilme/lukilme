@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-3xl mx-auto my-20 p-8 font-sans">
+  <div class="max-w-3xl mx-auto font-sans">
     <h1 class="text-4xl font-bold mb-8 text-black border-b-4 border-black pb-2">
       {{ title }}
     </h1>
@@ -13,7 +13,7 @@
         'bg-yellow-400 hover:bg-pink-300': activeIndex !== index
       }"
     >
-      <!-- Header clicável -->
+
       <div
         class="w-full flex justify-between items-center p-6 cursor-pointer"
         @click="toggleAccordion(index)"
@@ -27,7 +27,6 @@
         </span>
       </div>
 
-      <!-- Conteúdo -->
       <div
         class="overflow-hidden transition-all duration-300 ease-in-out bg-white"
         :class="{

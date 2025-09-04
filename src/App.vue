@@ -10,12 +10,10 @@ import Contact from './components/Contact.vue'
    <div class="mx-auto my-15 py-20">
       <NavBar />
       <main >
-         <!-- <section id="homeview" class="pb-10">
-            <HomeView />
-         </section> -->
-         <section id="sobre" class="py-10">
+         <section id="sobre" >
             <About />
          </section>
+         
          <section id="projetos">
             <Project />
          </section>
@@ -31,6 +29,7 @@ import Contact from './components/Contact.vue'
    }
    section{
     height: 400px;
+    margin-top: 20px;
    }
 
    #homeview{
