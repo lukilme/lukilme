@@ -13,7 +13,7 @@ import Contact from './components/Contact.vue'
          <section id="sobre" >
             <About />
          </section>
-         
+
          <section id="projetos">
             <Project />
          </section>
@@ -27,11 +27,12 @@ import Contact from './components/Contact.vue'
    html {
    scroll-behavior: smooth; 
    }
-   section{
-    height: 400px;
-    margin-top: 20px;
-   }
-
+section {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center; 
+  padding: 2rem;
+}
    #homeview{
       margin:auto;
    }
