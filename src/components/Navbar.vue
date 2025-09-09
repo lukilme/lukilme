@@ -3,10 +3,10 @@
     class="bg-white border-4 border-black shadow-[8px_8px_0px_0px] shadow-yellow-500 w-full md:w-5/6 lg:w-3/4 xl:w-2/3 mx-auto p-4 md:p-5 -rotate-1 hover:rotate-0 transition-all duration-300 hover:shadow-[12px_12px_0px_0px] hover:shadow-yellow-500 fixed top-5 left-1/2 -translate-x-1/2 z-50 mobile-optimized"
   >
     <div
-      class="absolute -top-2 -right-2 w-4 h-4 md:w-5 md:h-5 bg-emerald-400 border-2 border-black rotate-45"
+      class="absolute -top-2 -right-2 w-5 h-5 md:w-5 md:h-5 bg-emerald-400 border-4 border-black rotate-45"
     ></div>
     <div
-      class="absolute -bottom-2 -left-2 w-3 h-3 md:w-4 md:h-4 bg-blue-500 border-2 border-black rounded-full"
+      class="absolute -bottom-2 -left-2 w-4 h-4 md:w-4 md:h-4 bg-blue-500 border-4 border-black rounded-full"
     ></div>
     <div
       class="flex flex-col sm:flex-row justify-between items-center gap-3 md:gap-4 lg:gap-5"
@@ -14,7 +14,7 @@
       <div
         class="text-purple-300 text-xl sm:text-2xl md:text-3xl font-bold uppercase tracking-wider cursor-pointer transition-all duration-200 hover:text-purple-400 hover:scale-110 glitch-effect whitespace-nowrap"
       >
-        Kilmer
+        Portfólio
       </div>
       <ul
         class="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 w-full sm:w-auto mobile-optimized-links"

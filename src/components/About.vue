@@ -66,13 +66,13 @@ export default {
           title: "Informações pessoais",
           type: "text",
           content:
-            "Elias Vance, 28 anos, é uma mente analítica com um lado criativo...",
+            "Kilmer desenvolvedor e bla bla bla",
         },
         {
           title: "Informações profissionais",
           type: "text",
           content:
-            "Como Desenvolvedor Full-Stack Sênior, Elias é um arquiteto de soluções...",
+            "Como Desenvolvedor Full-Stack e etc, Eu é um arquiteto de soluções...",
         },
         {
           title: "Visão do futuro e perspectivas",

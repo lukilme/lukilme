@@ -2,14 +2,32 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com">
+      
+    </script>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body class="bg-white min-h-screen p-5 w-full">
     <div id="app" class="flex content-center w-full"></div>
     <script type="module" src="/src/main.ts"></script>
+    <script>
+      tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'neo-pink': '#FF006E',
+                        'neo-yellow': '#FFBE0B', 
+                        'neo-purple': '#8338EC',
+                        'neo-blue': '#3A86FF',
+                        'neo-orange': '#FB5607',
+                        'neo-green': '#1bae00'
+                    }
+                }
+            }
+        }
+    </script>
   </body>
 </html>
