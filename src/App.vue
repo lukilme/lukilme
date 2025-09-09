@@ -6,35 +6,35 @@ import NavBar from "./components/Navbar.vue"
 import Project from "./components/Project.vue"
 import Contact from "./components/Contact.vue"
 
-function chaosMode() {
-  const cards = document.querySelectorAll<HTMLDivElement>(".grid > div")
-  const colors = ["bg-pink-500", "bg-yell-500ow", "bg-purp-500le", "bg-blue-500", "bg-oran-500ge", "bg-black"]
-  const textColors = ["text-white", "text-black"]
+// function chaosMode() {
+//   const cards = document.querySelectorAll<HTMLDivElement>(".grid > div")
+//   const colors = ["bg-pink-500", "bg-yell-500ow", "bg-purp-500le", "bg-blue-500", "bg-oran-500ge", "bg-black"]
+//   const textColors = ["text-white", "text-black"]
 
-  cards.forEach(card => {
-    // limpa cores existentes
-    colors.forEach(c => card.classList.remove(c))
-    textColors.forEach(c => card.classList.remove(c))
+//   cards.forEach(card => {
+//     // limpa cores existentes
+//     colors.forEach(c => card.classList.remove(c))
+//     textColors.forEach(c => card.classList.remove(c))
 
-    // aplica cores aleatórias
-    const randomBg = colors[Math.floor(Math.random() * colors.length)]
-    const randomText = randomBg === "bg-yell-500ow" ? "text-black" : "text-white"
+//     // aplica cores aleatórias
+//     const randomBg = colors[Math.floor(Math.random() * colors.length)]
+//     const randomText = randomBg === "bg-yell-500ow" ? "text-black" : "text-white"
 
-    card.classList.add(randomBg, randomText)
+//     card.classList.add(randomBg, randomText)
 
-    // rotação e escala aleatórias
-    const randomRotate = Math.random() * 20 - 10
-    const randomScale = 0.95 + Math.random() * 0.1
-    card.style.transform = `rotate(${randomRotate}deg) scale(${randomScale})`
-  })
+//     // rotação e escala aleatórias
+//     const randomRotate = Math.random() * 20 - 10
+//     const randomScale = 0.95 + Math.random() * 0.1
+//     card.style.transform = `rotate(${randomRotate}deg) scale(${randomScale})`
+//   })
 
-  // em vez de reload, apenas reset (se quiser)
-  setTimeout(() => {
-    cards.forEach(card => {
-      card.style.transform = ""
-    })
-  }, 3000)
-}
+//   // em vez de reload, apenas reset (se quiser)
+//   setTimeout(() => {
+//     cards.forEach(card => {
+//       card.style.transform = ""
+//     })
+//   }, 3000)
+// }
 
 function createChaosElements() {
   const chaosTexts = ["CODE", "BUILD", "SHIP", "DEBUG", "TEST", "DEPLOY", "SCALE", "OPTIMIZE"]
@@ -59,7 +59,7 @@ onMounted(() => {
   const intervalId = createChaosElements()
   // exemplo: ativa caos ao carregar
   // chaosMode()
-chaosMode()
+// chaosMode()
   onUnmounted(() => {
     clearInterval(intervalId)
   })
