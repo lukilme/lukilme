@@ -10,7 +10,7 @@ import Techstack from "./components/Techstack.vue"
 
 function chaosMode() {
   const cards = document.querySelectorAll<HTMLDivElement>(".grid > div")
-  const colors = ["bg-pink-500", "bg-yellow-500", "bg-purple-500", "bg-blue-500", "bg-orange-500", "bg-red-600"]
+  const colors = ["bg-pink-500", "bg-yellow-500", "bg-purple-500", "bg-cyan-500", "bg-orange-500", "bg-red-600"]
   const textColors = ["text-white", "text-black"]
 
   cards.forEach(card => {

@@ -16,7 +16,7 @@
                 <ul class="space-y-2">
                     <li class="flex items-center p-2 bg-white bg-opacity-10 border-2 border-white hover:translate-x-2 transition-transform duration-200">
                         <div class="w-5 h-5 bg-white mr-2 rounded-sm"></div>
-                        <span class="flex-1">React.js</span>
+                        <span class="flex-1">AngularJS</span>
                         <div class="flex gap-1 ml-2">
                             <div class="w-4 h-1 bg-white"></div>
                             <div class="w-4 h-1 bg-white"></div>
@@ -27,13 +27,13 @@
                     </li>
                     <li class="flex items-center p-2 bg-white bg-opacity-10 border-2 border-white hover:translate-x-2 transition-transform duration-200">
                         <div class="w-5 h-5 bg-white mr-2 rounded-sm"></div>
-                        <span class="flex-1">Next.js</span>
+                        <span class="flex-1">Nuxt.js</span>
                         <div class="flex gap-1 ml-2">
                             <div class="w-4 h-1 bg-white"></div>
                             <div class="w-4 h-1 bg-white"></div>
                             <div class="w-4 h-1 bg-white"></div>
-                            <div class="w-4 h-1 bg-white"></div>
-                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white bg-opacity-30"></div>
+                            <div class="w-4 h-1 bg-white bg-opacity-30"></div>
                         </div>
                     </li>
                     <li class="flex items-center p-2 bg-white bg-opacity-10 border-2 border-white hover:translate-x-2 transition-transform duration-200">
@@ -54,7 +54,7 @@
                             <div class="w-4 h-1 bg-white"></div>
                             <div class="w-4 h-1 bg-white"></div>
                             <div class="w-4 h-1 bg-white"></div>
-                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white bg-opacity-30"></div>
                             <div class="w-4 h-1 bg-white bg-opacity-30"></div>
                         </div>
                     </li>
