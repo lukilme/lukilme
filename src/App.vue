@@ -108,21 +108,20 @@ onMounted(() => {
 
     <div class="mx-auto my-15 py-20 z-50">
       <NavBar />
+
       <main>
         <section id="sobre" class="mt-10">
           <About />
         </section>
+        <section id="skills">
+          <Skills />
+        </section>
         <section id="projetos">
           <Project />
         </section>
-        <section id="techstack">
           <button @click="chaosMode"><b><u>Change!!!</u></b></button>
+        <section id="techstack">
           <Techstack />
-        </section>
-        
-        <section id="skills">
-          
-          <Skills />
         </section>
         <section id="contato">
           <Contact />
@@ -140,7 +139,7 @@ html {
 }
 
 section {
-  min-height: 70vh;
+  min-height: 40vh;
   display: flex;
   justify-content: center;
   padding: 2rem;
