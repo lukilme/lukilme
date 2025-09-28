@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack & Tech - Neobrutalist Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        @keyframes glitch {
+            0%, 100% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(10px, -10px) rotate(5deg); }
+            50% { transform: translate(-5px, -20px) rotate(-5deg); }
+            75% { transform: translate(-10px, -5px) rotate(5deg); }
+        }
+
+        @keyframes chaos {
+            0% { transform: translateX(-100px) rotate(0deg); opacity: 0; }
+            50% { opacity: 0.1; }
+            100% { transform: translateX(calc(100vw + 100px)) rotate(360deg); opacity: 0; }
+        }
+
+        .glitch { animation: glitch 2s infinite; }
+        .float-1 { animation: float 6s ease-in-out infinite; }
+        .float-2 { animation: float 4s ease-in-out infinite reverse; }
+        .float-3 { animation: float 8s ease-in-out infinite; }
+        .float-4 { animation: float 5s ease-in-out infinite reverse; }
+        .chaos-text { animation: chaos 10s linear infinite; }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'neo-pink': '#FF006E',
+                        'neo-yellow': '#FFBE0B', 
+                        'neo-purple': '#8338EC',
+                        'neo-blue': '#3A86FF',
+                        'neo-orange': '#FB5607'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-mono bg-white text-black overflow-x-hidden">
+    <!-- Floating Shapes -->
+    <div class="fixed inset-0 pointer-events-none z-0">
+        <div class="absolute w-16 h-16 bg-neo-pink border-4 border-black top-[10%] left-[10%] float-1"></div>
+        <div class="absolute w-20 h-20 bg-neo-yellow border-4 border-black rounded-full top-[70%] right-[15%] float-2"></div>
+        <div class="absolute w-10 h-24 bg-neo-purple border-4 border-black top-[40%] right-[5%] float-3"></div>
+        <div class="absolute w-24 h-10 bg-neo-blue border-4 border-black bottom-[20%] left-[5%] float-4"></div>
+    </div>
+
+    <!-- Chaos Text Elements -->
+    <div class="chaos-text fixed top-[20%] left-0 text-sm font-bold opacity-10 pointer-events-none">CODE</div>
+    <div class="chaos-text fixed top-[60%] left-0 text-sm font-bold opacity-10 pointer-events-none" style="animation-delay: -3s;">DEVELOP</div>
+    <div class="chaos-text fixed top-[80%] left-0 text-sm font-bold opacity-10 pointer-events-none" style="animation-delay: -6s;">BUILD</div>
+
+    <div class="max-w-7xl mx-auto px-4 md:px-8 py-8 relative z-10">
+        <!-- Header -->
+        <header class="text-center mb-16">
+            <h1 class="glitch text-4xl md:text-6xl lg:text-8xl font-black uppercase tracking-tighter text-black">
+                TECH STACK
+            </h1>
+        </header>
+
+        <!-- Stack Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Frontend -->
+            <div class="bg-neo-pink text-white border-4 border-black shadow-[4px_4px_0px_0px_black] p-6 -rotate-1 hover:rotate-0 hover:scale-105 transition-all duration-300 hover:shadow-[8px_8px_0px_0px_black]">
+                <h2 class="text-xl md:text-2xl font-black uppercase mb-4 relative">
+                    Frontend
+                    <div class="absolute -bottom-1 left-0 w-12 h-1 bg-white"></div>
+                </h2>
+                <ul class="space-y-2">
+                    <li class="flex items-center p-2 bg-white bg-opacity-10 border-2 border-white hover:translate-x-2 transition-transform duration-200">
+                        <div class="w-5 h-5 bg-white mr-2 rounded-sm"></div>
+                        <span class="flex-1">React.js</span>
+                        <div class="flex gap-1 ml-2">
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white bg-opacity-30"></div>
+                        </div>
+                    </li>
+                    <li class="flex items-center p-2 bg-white bg-opacity-10 border-2 border-white hover:translate-x-2 transition-transform duration-200">
+                        <div class="w-5 h-5 bg-white mr-2 rounded-sm"></div>
+                        <span class="flex-1">Next.js</span>
+                        <div class="flex gap-1 ml-2">
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white"></div>
+                        </div>
+                    </li>
+                    <li class="flex items-center p-2 bg-white bg-opacity-10 border-2 border-white hover:translate-x-2 transition-transform duration-200">
+                        <div class="w-5 h-5 bg-white mr-2 rounded-sm"></div>
+                        <span class="flex-1">TypeScript</span>
+                        <div class="flex gap-1 ml-2">
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white bg-opacity-30"></div>
+                            <div class="w-4 h-1 bg-white bg-opacity-30"></div>
+                        </div>
+                    </li>
+                    <li class="flex items-center p-2 bg-white bg-opacity-10 border-2 border-white hover:translate-x-2 transition-transform duration-200">
+                        <div class="w-5 h-5 bg-white mr-2 rounded-sm"></div>
+                        <span class="flex-1">Tailwind CSS</span>
+                        <div class="flex gap-1 ml-2">
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white bg-opacity-30"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Backend -->
+            <div class="bg-neo-yellow text-black border-4 border-black shadow-[4px_4px_0px_0px_black] p-6 rotate-1 hover:rotate-0 hover:scale-105 transition-all duration-300 hover:shadow-[8px_8px_0px_0px_black]">
+                <h2 class="text-xl md:text-2xl font-black uppercase mb-4 relative">
+                    Backend
+                    <div class="absolute -bottom-1 left-0 w-12 h-1 bg-black"></div>
+                </h2>
+                <ul class="space-y-2">
+                    <li class="flex items-center p-2 bg-black bg-opacity-10 border-2 border-black hover:translate-x-2 transition-transform duration-200">
+                        <div class="w-5 h-5 bg-black mr-2 rounded-sm"></div>
+                        <span class="flex-1">Node.js</span>
+                        <div class="flex gap-1 ml-2">
+                            <div class="w-4 h-1 bg-black"></div>
+                            <div class="w-4 h-1 bg-black"></div>
+                            <div class="w-4 h-1 bg-black"></div>
+                            <div class="w-4 h-1 bg-black"></div>
+                            <div class="w-4 h-1 bg-black opacity-30"></div>
+                        </div>
+                    </li>
+                    <li class="flex items-center p-2 bg-black bg-opacity-10 border-2 border-black hover:translate-x-2 transition-transform duration-200">
+                        <div class="w-5 h-5 bg-black mr-2 rounded-sm"></div>
+                        <span class="flex-1">Python</span>
+                        <div class="flex gap-1 ml-2">
+                            <div class="w-4 h-1 bg-black"></div>
+                            <div class="w-4 h-1 bg-black"></div>
+                            <div class="w-4 h-1 bg-black"></div>
+                            <div class="w-4 h-1 bg-black opacity-30"></div>
+                            <div class="w-4 h-1 bg-black opacity-30"></div>
+                        </div>
+                    </li>
+                    <li class="flex items-center p-2 bg-black bg-opacity-10 border-2 border-black hover:translate-x-2 transition-transform duration-200">
+                        <div class="w-5 h-5 bg-black mr-2 rounded-sm"></div>
+                        <span class="flex-1">Express.js</span>
+                        <div class="flex gap-1 ml-2">
+                            <div class="w-4 h-1 bg-black"></div>
+                            <div class="w-4 h-1 bg-black"></div>
+                            <div class="w-4 h-1 bg-black"></div>
+                            <div class="w-4 h-1 bg-black"></div>
+                            <div class="w-4 h-1 bg-black opacity-30"></div>
+                        </div>
+                    </li>
+                    <li class="flex items-center p-2 bg-black bg-opacity-10 border-2 border-black hover:translate-x-2 transition-transform duration-200">
+                        <div class="w-5 h-5 bg-black mr-2 rounded-sm"></div>
+                        <span class="flex-1">FastAPI</span>
+                        <div class="flex gap-1 ml-2">
+                            <div class="w-4 h-1 bg-black"></div>
+                            <div class="w-4 h-1 bg-black"></div>
+                            <div class="w-4 h-1 bg-black"></div>
+                            <div class="w-4 h-1 bg-black opacity-30"></div>
+                            <div class="w-4 h-1 bg-black opacity-30"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Database -->
+            <div class="bg-neo-purple text-white border-4 border-black shadow-[4px_4px_0px_0px_black] p-6 -rotate-1 hover:rotate-0 hover:scale-105 transition-all duration-300 hover:shadow-[8px_8px_0px_0px_black]">
+                <h2 class="text-xl md:text-2xl font-black uppercase mb-4 relative">
+                    Database
+                    <div class="absolute -bottom-1 left-0 w-12 h-1 bg-white"></div>
+                </h2>
+                <ul class="space-y-2">
+                    <li class="flex items-center p-2 bg-white bg-opacity-10 border-2 border-white hover:translate-x-2 transition-transform duration-200">
+                        <div class="w-5 h-5 bg-white mr-2 rounded-sm"></div>
+                        <span class="flex-1">PostgreSQL</span>
+                        <div class="flex gap-1 ml-2">
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white bg-opacity-30"></div>
+                        </div>
+                    </li>
+                    <li class="flex items-center p-2 bg-white bg-opacity-10 border-2 border-white hover:translate-x-2 transition-transform duration-200">
+                        <div class="w-5 h-5 bg-white mr-2 rounded-sm"></div>
+                        <span class="flex-1">MongoDB</span>
+                        <div class="flex gap-1 ml-2">
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white bg-opacity-30"></div>
+                            <div class="w-4 h-1 bg-white bg-opacity-30"></div>
+                        </div>
+                    </li>
+                    <li class="flex items-center p-2 bg-white bg-opacity-10 border-2 border-white hover:translate-x-2 transition-transform duration-200">
+                        <div class="w-5 h-5 bg-white mr-2 rounded-sm"></div>
+                        <span class="flex-1">Redis</span>
+                        <div class="flex gap-1 ml-2">
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white bg-opacity-30"></div>
+                            <div class="w-4 h-1 bg-white bg-opacity-30"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Tools -->
+            <div class="bg-neo-blue text-white border-4 border-black shadow-[4px_4px_0px_0px_black] p-6 rotate-1 hover:rotate-0 hover:scale-105 transition-all duration-300 hover:shadow-[8px_8px_0px_0px_black]">
+                <h2 class="text-xl md:text-2xl font-black uppercase mb-4 relative">
+                    Tools
+                    <div class="absolute -bottom-1 left-0 w-12 h-1 bg-white"></div>
+                </h2>
+                <ul class="space-y-2">
+                    <li class="flex items-center p-2 bg-white bg-opacity-10 border-2 border-white hover:translate-x-2 transition-transform duration-200">
+                        <div class="w-5 h-5 bg-white mr-2 rounded-sm"></div>
+                        <span class="flex-1">Git & GitHub</span>
+                        <div class="flex gap-1 ml-2">
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white"></div>
+                        </div>
+                    </li>
+                    <li class="flex items-center p-2 bg-white bg-opacity-10 border-2 border-white hover:translate-x-2 transition-transform duration-200">
+                        <div class="w-5 h-5 bg-white mr-2 rounded-sm"></div>
+                        <span class="flex-1">Docker</span>
+                        <div class="flex gap-1 ml-2">
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white bg-opacity-30"></div>
+                            <div class="w-4 h-1 bg-white bg-opacity-30"></div>
+                        </div>
+                    </li>
+                    <li class="flex items-center p-2 bg-white bg-opacity-10 border-2 border-white hover:translate-x-2 transition-transform duration-200">
+                        <div class="w-5 h-5 bg-white mr-2 rounded-sm"></div>
+                        <span class="flex-1">VS Code</span>
+                        <div class="flex gap-1 ml-2">
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white"></div>
+                        </div>
+                    </li>
+                    <li class="flex items-center p-2 bg-white bg-opacity-10 border-2 border-white hover:translate-x-2 transition-transform duration-200">
+                        <div class="w-5 h-5 bg-white mr-2 rounded-sm"></div>
+                        <span class="flex-1">Figma</span>
+                        <div class="flex gap-1 ml-2">
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white bg-opacity-30"></div>
+                            <div class="w-4 h-1 bg-white bg-opacity-30"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Mobile -->
+            <div class="bg-neo-orange text-white border-4 border-black shadow-[4px_4px_0px_0px_black] p-6 -rotate-1 hover:rotate-0 hover:scale-105 transition-all duration-300 hover:shadow-[8px_8px_0px_0px_black]">
+                <h2 class="text-xl md:text-2xl font-black uppercase mb-4 relative">
+                    Mobile
+                    <div class="absolute -bottom-1 left-0 w-12 h-1 bg-white"></div>
+                </h2>
+                <ul class="space-y-2">
+                    <li class="flex items-center p-2 bg-white bg-opacity-10 border-2 border-white hover:translate-x-2 transition-transform duration-200">
+                        <div class="w-5 h-5 bg-white mr-2 rounded-sm"></div>
+                        <span class="flex-1">React Native</span>
+                        <div class="flex gap-1 ml-2">
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white bg-opacity-30"></div>
+                            <div class="w-4 h-1 bg-white bg-opacity-30"></div>
+                        </div>
+                    </li>
+                    <li class="flex items-center p-2 bg-white bg-opacity-10 border-2 border-white hover:translate-x-2 transition-transform duration-200">
+                        <div class="w-5 h-5 bg-white mr-2 rounded-sm"></div>
+                        <span class="flex-1">Expo</span>
+                        <div class="flex gap-1 ml-2">
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white bg-opacity-30"></div>
+                            <div class="w-4 h-1 bg-white bg-opacity-30"></div>
+                        </div>
+                    </li>
+                    <li class="flex items-center p-2 bg-white bg-opacity-10 border-2 border-white hover:translate-x-2 transition-transform duration-200">
+                        <div class="w-5 h-5 bg-white mr-2 rounded-sm"></div>
+                        <span class="flex-1">Flutter</span>
+                        <div class="flex gap-1 ml-2">
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white bg-opacity-30"></div>
+                            <div class="w-4 h-1 bg-white bg-opacity-30"></div>
+                            <div class="w-4 h-1 bg-white bg-opacity-30"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Cloud -->
+            <div class="bg-black text-white border-4 border-black shadow-[4px_4px_0px_0px_black] p-6 rotate-1 hover:rotate-0 hover:scale-105 transition-all duration-300 hover:shadow-[8px_8px_0px_0px_black]">
+                <h2 class="text-xl md:text-2xl font-black uppercase mb-4 relative">
+                    Cloud
+                    <div class="absolute -bottom-1 left-0 w-12 h-1 bg-white"></div>
+                </h2>
+                <ul class="space-y-2">
+                    <li class="flex items-center p-2 bg-white bg-opacity-10 border-2 border-white hover:translate-x-2 transition-transform duration-200">
+                        <div class="w-5 h-5 bg-white mr-2 rounded-sm"></div>
+                        <span class="flex-1">AWS</span>
+                        <div class="flex gap-1 ml-2">
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white bg-opacity-30"></div>
+                            <div class="w-4 h-1 bg-white bg-opacity-30"></div>
+                        </div>
+                    </li>
+                    <li class="flex items-center p-2 bg-white bg-opacity-10 border-2 border-white hover:translate-x-2 transition-transform duration-200">
+                        <div class="w-5 h-5 bg-white mr-2 rounded-sm"></div>
+                        <span class="flex-1">Vercel</span>
+                        <div class="flex gap-1 ml-2">
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white bg-opacity-30"></div>
+                        </div>
+                    </li>
+                    <li class="flex items-center p-2 bg-white bg-opacity-10 border-2 border-white hover:translate-x-2 transition-transform duration-200">
+                        <div class="w-5 h-5 bg-white mr-2 rounded-sm"></div>
+                        <span class="flex-1">Netlify</span>
+                        <div class="flex gap-1 ml-2">
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white"></div>
+                            <div class="w-4 h-1 bg-white bg-opacity-30"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chaos Mode Button -->
+    <button 
+        onclick="chaosMode()" 
+        class="fixed bottom-8 right-8 px-6 py-4 bg-black text-white font-black uppercase border-4 border-black shadow-[4px_4px_0px_0px_#FF006E] hover:shadow-[6px_6px_0px_0px_#FF006E] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all duration-300"
+    >
+        CHAOS MODE
+    </button>
+
+    <script>
+        function chaosMode() {
+            const cards = document.querySelectorAll('.grid > div');
+            const colors = ['bg-neo-pink', 'bg-neo-yellow', 'bg-neo-purple', 'bg-neo-blue', 'bg-neo-orange', 'bg-black'];
+            const textColors = ['text-white', 'text-black'];
+            
+            cards.forEach(card => {
+                // Remove existing background colors
+                colors.forEach(color => card.classList.remove(color));
+                textColors.forEach(color => card.classList.remove(color));
+                
+                // Add random colors
+                const randomBg = colors[Math.floor(Math.random() * colors.length)];
+                const randomText = randomBg === 'bg-neo-yellow' ? 'text-black' : 'text-white';
+                
+                card.classList.add(randomBg, randomText);
+                
+                // Random rotation and scale
+                const randomRotate = Math.random() * 20 - 10;
+                const randomScale = 0.95 + Math.random() * 0.1;
+                card.style.transform = `rotate(${randomRotate}deg) scale(${randomScale})`;
+            });
+            
+            // Reset after 3 seconds
+            setTimeout(() => {
+                location.reload();
+            }, 3000);
+        }
+
+        // Create more chaos elements
+        function createChaosElements() {
+            const chaosTexts = ['CODE', 'BUILD', 'SHIP', 'DEBUG', 'TEST', 'DEPLOY', 'SCALE', 'OPTIMIZE'];
+            
+            setInterval(() => {
+                const chaosEl = document.createElement('div');
+                chaosEl.className = 'chaos-text fixed text-xs md:text-sm font-bold opacity-10 pointer-events-none';
+                chaosEl.textContent = chaosTexts[Math.floor(Math.random() * chaosTexts.length)];
+                chaosEl.style.top = Math.random() * 100 + '%';
+                chaosEl.style.left = '-100px';
+                document.body.appendChild(chaosEl);
+                
+                setTimeout(() => {
+                    chaosEl.remove();
+                }, 10000);
+            }, 2000);
+        }
+
+        createChaosElements();
+    </script>
+</body>
+</html>
