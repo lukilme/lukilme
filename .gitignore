@@ -2,4 +2,4 @@ backup
 dist
 node_modules
 .vite
-backup
+backup/*
