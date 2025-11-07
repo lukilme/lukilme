@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Minimalista | Luis Kilmer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-in-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(30px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .article-content h2 {
+            @apply text-3xl font-bold mt-12 mb-6 pb-2 border-b border-gray-200;
+        }
+        
+        .article-content h3 {
+            @apply text-2xl font-bold mt-10 mb-4;
+        }
+        
+        .article-content p {
+            @apply text-gray-700 leading-relaxed mb-6;
+        }
+        
+        .article-content ul, .article-content ol {
+            @apply mb-6 pl-6;
+        }
+        
+        .article-content li {
+            @apply text-gray-700 mb-2;
+        }
+        
+        .article-content blockquote {
+            @apply border-l-4 border-black pl-6 py-2 my-8 italic text-gray-600;
+        }
+        
+        .article-content .image-caption {
+            @apply text-center text-gray-500 text-sm mt-2 mb-8;
+        }
+        
+        .chart-container {
+            @apply bg-gray-50 p-6 rounded-xl my-8;
+        }
+        
+        .tech-stack {
+            @apply flex flex-wrap gap-2 my-6;
+        }
+        
+        .tech-tag {
+            @apply bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm;
+        }
+        
+        .project-meta {
+            @apply flex flex-wrap gap-6 text-gray-600 text-sm mb-8;
+        }
+        
+        .project-meta div {
+            @apply flex items-center gap-2;
+        }
+        
+        .nav-button {
+            @apply flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-300 hover:bg-gray-50 transition-all duration-300;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900 font-sans">
+    <header class="sticky top-0 bg-white z-10 border-b border-gray-200">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="logo text-2xl font-bold">LuK</a>
+            <ul class="flex space-x-6">
+                <li><a href="index.html#projetos" class="hover:text-gray-600 transition-colors">Projetos</a></li>
+                <li><a href="index.html#skills" class="hover:text-gray-600 transition-colors">Skills</a></li>
+                <li><a href="index.html#contato" class="hover:text-gray-600 transition-colors">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 py-12">
+        <article class="animate-fade-in">
+            <!-- Cabeçalho do Projeto -->
+            <header class="mb-12">
+                <div class="project-meta">
+                    <div><i class="far fa-calendar"></i> <span>Publicado em: 15 de Março, 2025</span></div>
+                    <div><i class="far fa-clock"></i> <span>Tempo de leitura: 8 min</span></div>
+                    <div><i class="fas fa-tags"></i> <span>Categoria: Desenvolvimento Web</span></div>
+                </div>
+                
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">E-Commerce Minimalista</h1>
+                <p class="text-xl text-gray-600 mb-8">Uma plataforma de e-commerce focada em experiência do usuário, performance e design limpo.</p>
+                
+                <div class="tech-stack">
+                    <span class="tech-tag">Spring Boot</span>
+                    <span class="tech-tag">Angular</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">Tailwind CSS</span>
+                    <span class="tech-tag">Docker</span>
+                    <span class="tech-tag">AWS</span>
+                </div>
+            </header>
+
+            <!-- Imagem de Destaque -->
+            <div class="mb-12 rounded-xl overflow-hidden shadow-lg">
+                <img src="https://placehold.co/1200x600/ffffff/000000?text=E-Commerce+Dashboard" alt="Dashboard do E-Commerce" class="w-full">
+                <p class="image-caption">Dashboard administrativo do sistema de e-commerce</p>
+            </div>
+
+            <!-- Conteúdo do Artigo -->
+            <div class="article-content">
+                <p>Desenvolver uma plataforma de e-commerce que prioriza a experiência do usuário sem sacrificar a performance foi o principal desafio deste projeto. O objetivo era criar uma solução que fosse ao mesmo tempo visualmente atraente e extremamente funcional.</p>
+                
+                <h2>O Desafio</h2>
+                <p>O cliente necessitava de uma plataforma de e-commerce que pudesse lidar com um grande volume de produtos e transações, mantendo tempos de carregamento rápidos e uma experiência de usuário fluida em todos os dispositivos.</p>
+                
+                <blockquote>
+                    "A simplicidade é o último grau de sofisticação." - Leonardo da Vinci
+                </blockquote>
+                
+                <p>Esta filosofia guiou todo o processo de desenvolvimento, resultando em uma interface limpa que elimina distrações e foca no que é essencial para a conversão.</p>
+                
+                <h2>Arquitetura da Solução</h2>
+                
+                <div class="chart-container">
+                    <h3 class="text-xl font-bold mb-4 text-center">Arquitetura do Sistema</h3>
+                    <img src="https://placehold.co/800x400/ffffff/000000?text=Diagrama+de+Arquitetura" alt="Diagrama de Arquitetura" class="w-full rounded-lg">
+                    <p class="image-caption">Diagrama mostrando a arquitetura microserviços do e-commerce</p>
+                </div>
+                
+                <p>Optamos por uma arquitetura baseada em microserviços para garantir escalabilidade e manutenibilidade. O backend foi desenvolvido em Spring Boot, com cada funcionalidade principal sendo um serviço independente:</p>
+                
+                <ul>
+                    <li><strong>Serviço de Catálogo:</strong> Gerencia produtos, categorias e inventário</li>
+                    <li><strong>Serviço de Pedidos:</strong> Processa e rastreia pedidos dos clientes</li>
+                    <li><strong>Serviço de Pagamento:</strong> Integra com múltiplos gateways de pagamento</li>
+                    <li><strong>Serviço de Usuários:</strong> Gerencia autenticação e perfis de clientes</li>
+                </ul>
+                
+                <h3>Frontend Angular</h3>
+                <p>O frontend foi desenvolvido em Angular com uma abordagem componentizada. Utilizamos lazy loading para otimizar o carregamento inicial da aplicação e implementamos uma PWA (Progressive Web App) para oferecer uma experiência similar a aplicativos nativos.</p>
+                
+                <!-- Vídeo Demonstrativo -->
+                <div class="my-12 bg-black rounded-xl overflow-hidden shadow-lg">
+                    <div class="aspect-w-16 aspect-h-9 bg-gray-800 flex items-center justify-center">
+                        <div class="text-center text-white p-8">
+                            <i class="fas fa-play-circle text-6xl mb-4 opacity-70"></i>
+                            <p class="text-xl">Vídeo demonstrativo do fluxo de compra</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h2>Desempenho e Otimização</h2>
+                <p>Um dos principais focos do projeto foi a otimização de performance. Implementamos diversas técnicas para garantir tempos de carregamento rápidos:</p>
+                
+                <div class="chart-container">
+                    <h3 class="text-xl font-bold mb-4 text-center">Métricas de Performance</h3>
+                    <img src="https://placehold.co/800x300/ffffff/000000?text=Gráfico+de+Performance" alt="Gráfico de Performance" class="w-full rounded-lg">
+                    <p class="image-caption">Comparação de métricas de performance antes e depois das otimizações</p>
+                </div>
+                
+                <ul>
+                    <li>Implementação de cache em múltiplos níveis (Redis, CDN)</li>
+                    <li>Otimização de imagens com lazy loading</li>
+                    <li>Code splitting e tree shaking no frontend</li>
+                    <li>Compressão Gzip e minificação de recursos</li>
+                    <li>Utilização de HTTP/2 para multiplexação de requisições</li>
+                </ul>
+                
+                <h2>Design de Interface</h2>
+                <p>A interface foi projetada seguindo princípios de design minimalista, com foco na usabilidade e acessibilidade. Utilizamos o Tailwind CSS para criar um sistema de design consistente e altamente customizável.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <img src="https://placehold.co/600x400/ffffff/000000?text=Mobile+View" alt="Visualização Mobile" class="w-full rounded">
+                        <p class="image-caption">Interface otimizada para dispositivos móveis</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <img src="https://placehold.co/600x400/ffffff/000000?text=Desktop+View" alt="Visualização Desktop" class="w-full rounded">
+                        <p class="image-caption">Experiência desktop com layout amplo</p>
+                    </div>
+                </div>
+                
+                <h2>Resultados e Métricas</h2>
+                <p>Após o lançamento, a plataforma demonstrou melhorias significativas em várias métricas importantes:</p>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 my-8">
+                    <div class="bg-gray-50 p-4 rounded-lg text-center">
+                        <div class="text-2xl font-bold text-black">3.2s</div>
+                        <div class="text-gray-600 text-sm">Tempo de Carregamento</div>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center">
+                        <div class="text-2xl font-bold text-black">+42%</div>
+                        <div class="text-gray-600 text-sm">Conversão</div>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center">
+                        <div class="text-2xl font-bold text-black">98.7%</div>
+                        <div class="text-gray-600 text-sm">Disponibilidade</div>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center">
+                        <div class="text-2xl font-bold text-black">-68%</div>
+                        <div class="text-gray-600 text-sm">Taxa de Rejeição</div>
+                    </div>
+                </div>
+                
+                <h2>Lições Aprendidas</h2>
+                <p>Este projeto reforçou a importância de priorizar a experiência do usuário desde as primeiras etapas do desenvolvimento. A arquitetura de microserviços provou ser vantajosa para manutenção e escalabilidade, mas introduziu complexidade adicional na orquestração e monitoramento.</p>
+                
+                <p>A integração contínua entre design e desenvolvimento foi crucial para manter a consistência visual e funcional em toda a plataforma. O uso de componentes reutilizáveis no frontend acelerou significativamente o desenvolvimento de novas funcionalidades.</p>
+                
+                <h2>Próximos Passos</h2>
+                <p>Estamos planejando expandir a plataforma com as seguintes funcionalidades:</p>
+                
+                <ul>
+                    <li>Sistema de recomendação baseado em machine learning</li>
+                    <li>Integração com mais gateways de pagamento locais</li>
+                    <li>Funcionalidades de realidade aumentada para visualização de produtos</li>
+                    <li>Expansão para novos mercados internacionais</li>
+                </ul>
+                
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-12 rounded-r-lg">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-lightbulb text-blue-500 text-xl mt-1"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-bold text-blue-800">Ideia para Futuro Desenvolvimento</h3>
+                            <p class="text-blue-700 mt-2">Estamos explorando a possibilidade de implementar um sistema de checkout com um passo único, reduzindo ainda mais o atrito na finalização de compras.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navegação entre Projetos -->
+            <div class="flex justify-between mt-16 pt-8 border-t border-gray-200">
+                <a href="#" class="nav-button">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Projeto Anterior</span>
+                </a>
+                <a href="index.html#projetos" class="nav-button">
+                    <i class="fas fa-th-large"></i>
+                    <span>Todos os Projetos</span>
+                </a>
+                <a href="#" class="nav-button">
+                    <span>Próximo Projeto</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </article>
+    </main>
+
+    <footer class="bg-black text-white py-12 mt-16">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="logo text-2xl font-bold tracking-wider mb-2">LuK</div>
+                    <p class="text-gray-400">Desenvolvedor Full Stack & Designer</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                        <i class="fab fa-dribbble text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
+                <p>&copy; 2025 Luis Kilmer. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Animação de entrada para elementos
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+
+        document.querySelectorAll('.article-content h2, .article-content h3, .article-content p, .article-content ul, .article-content blockquote, .chart-container, .tech-stack').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

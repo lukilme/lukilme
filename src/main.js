@@ -90,5 +90,16 @@ document.querySelectorAll('section h2, section p, .project-card, .skill-item').f
     observer.observe(el);
 });
 
+const dot = document.querySelector('.cursor-dot');
+    const outline = document.querySelector('.cursor-outline');
+
+    window.addEventListener('mousemove', e => {
+      const { clientX: x, clientY: y } = e;
+      dot.style.left = `${x}px`;
+      dot.style.top = `${y}px`;
+      outline.style.left = `${x}px`;
+      outline.style.top = `${y}px`;
+    });
 
 console.warn("woring for while")
+
