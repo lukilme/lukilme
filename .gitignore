@@ -4,3 +4,4 @@ node_modules
 .vite
 backup/*
 *.ipynb
+*.py
