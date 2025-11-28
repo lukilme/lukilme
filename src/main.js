@@ -1,105 +1,58 @@
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
-        }
-    });
-});
+document.addEventListener('DOMContentLoaded', function () {
+    const binaryRain = document.getElementById('binaryRain');
+    const digitCount = 100;
 
-const projectCards = document.querySelectorAll('.project-card');
-projectCards.forEach(card => {
-    card.addEventListener('mouseenter', function () {
-        this.style.transform = 'translateY(-10px)';
-    });
-    card.addEventListener('mouseleave', function () {
-        this.style.transform = 'translateY(0)';
-    });
-});
+    for (let i = 0; i < digitCount; i++) {
+        const digit = document.createElement('div');
+        digit.classList.add('binary-digit');
 
+        const posX = Math.random() * 100;
 
-const cursorDot = document.querySelector('.cursor-dot');
-const cursorOutline = document.querySelector('.cursor-outline');
+        digit.textContent = Math.random() > 0.5 ? '1' : '0';
 
-document.addEventListener('mousemove', (e) => {
-    cursorDot.style.left = `${e.clientX}px`;
-    cursorDot.style.top = `${e.clientY}px`;
+        const size = Math.random() * 16 + 10;
 
-    setTimeout(() => {
-        cursorOutline.style.left = `${e.clientX}px`;
-        cursorOutline.style.top = `${e.clientY}px`;
-    }, 80);
-});
+        const duration = Math.random() * 10 + 5;
+        const delay = Math.random() * 5;
 
+        digit.style.left = `${posX}%`;
+        digit.style.fontSize = `${size}px`;
+        digit.style.animationDuration = `${duration}s`;
+        digit.style.animationDelay = `${delay}s`;
 
-const interactiveElements = document.querySelectorAll('a, button, .project-card, .skill-item');
-interactiveElements.forEach(el => {
-    el.addEventListener('mouseenter', () => {
-        cursorDot.style.transform = 'translate(-50%, -50%) scale(1.5)';
-        cursorOutline.style.transform = 'translate(-50%, -50%) scale(1.5)';
-    });
-
-    el.addEventListener('mouseleave', () => {
-        cursorDot.style.transform = 'translate(-50%, -50%) scale(1)';
-        cursorOutline.style.transform = 'translate(-50%, -50%) scale(1)';
-    });
-});
-
-// Animação de digitação
-// const typewriterElement = document.querySelector('.typewriter-text');
-// if (typewriterElement) {
-//     // Inicia a animação após um pequeno delay
-//     setTimeout(() => {
-//         typewriterElement.style.animation = 'typewriter 2s steps(40) 1s forwards, blink 0.75s step-end infinite';
-//     }, 500);
-// }
-
-
-window.addEventListener('scroll', () => {
-    const header = document.querySelector('header');
-    if (window.scrollY > 50) {
-        header.classList.add('shadow-md');
-        header.classList.remove('bg-white/90');
-        header.classList.add('bg-white');
-    } else {
-        header.classList.remove('shadow-md');
-        header.classList.remove('bg-white');
-        header.classList.add('bg-white/90');
+        binaryRain.appendChild(digit);
     }
-});
 
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+    const subtitle = document.querySelector('.subtitle');
+    const originalText = subtitle.textContent;
+    subtitle.textContent = '';
+
+    let i = 0;
+    const typeWriter = () => {
+        if (i < originalText.length) {
+            subtitle.textContent += originalText.charAt(i);
+            i++;
+            setTimeout(typeWriter, 100);
         }
-    });
-}, observerOptions);
+    };
 
-document.querySelectorAll('section h2, section p, .project-card, .skill-item').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(el);
+    setTimeout(typeWriter, 1500);
+
+    const linkTitles = document.querySelectorAll('.link-info h3');
+    linkTitles.forEach(title => {
+        const originalTitle = title.textContent;
+        title.textContent = '';
+
+        let j = 0;
+        const titleTypeWriter = () => {
+            if (j < originalTitle.length) {
+                title.textContent += originalTitle.charAt(j);
+                j++;
+                setTimeout(titleTypeWriter, 50 + Math.random() * 100);
+            }
+        };
+
+        setTimeout(titleTypeWriter, 2000 + Math.random() * 3000);
+    });
 });
-
-const dot = document.querySelector('.cursor-dot');
-    const outline = document.querySelector('.cursor-outline');
-
-    window.addEventListener('mousemove', e => {
-      const { clientX: x, clientY: y } = e;
-      dot.style.left = `${x}px`;
-      dot.style.top = `${y}px`;
-      outline.style.left = `${x}px`;
-      outline.style.top = `${y}px`;
-    });
-
-console.warn("woring for while")
-

@@ -1,390 +1,138 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio - Luis Kilmer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>CyberLinks - Portfólio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="src/main.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    animation: {
-                        'fade-in': 'fadeIn 0.8s ease-in-out',
-                        'slide-up': 'slideUp 0.8s ease-out',
-                        'slide-down': 'slideDown 0.8s ease-out',
-                        'typewriter': 'typewriter 2s steps(40) 1s forwards, blink 0.75s step-end infinite',
-                        'float': 'float 6s ease-in-out infinite',
-                        'pulse-slow': 'pulse 3s infinite',
-                    },
-                    keyframes: {
-                        fadeIn: {
-                            '0%': { opacity: '0' },
-                            '100%': { opacity: '1' },
-                        },
-                        slideUp: {
-                            '0%': { transform: 'translateY(30px)', opacity: '0' },
-                            '100%': { transform: 'translateY(0)', opacity: '1' },
-                        },
-                        slideDown: {
-                            '0%': { transform: 'translateY(-30px)', opacity: '0' },
-                            '100%': { transform: 'translateY(0)', opacity: '1' },
-                        },
-                        typewriter: {
-                            '0%': { width: '0' },
-                            '100%': { width: '100%' },
-                        },
-                        blink: {
-                            '0%, 100%': { borderColor: 'transparent' },
-                            '50%': { borderColor: 'black' },
-                        },
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-10px)' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="./src/main.css">
+    <script src="src/main.js"></script>
 </head>
 
-<body class="bg-white text-gray-900 font-sans overflow-x-hidden">
- 
-    <div
-        class="cursor-dot fixed w-3 h-3 bg-black rounded-full pointer-events-none z-50 transform -translate-x-1/2 -translate-y-1/2 mix-blend-difference">
+<body>
+    <!-- Elementos de fundo animados -->
+    <div class="cyber-grid"></div>
+    <div class="scan-line"></div>
+    <div class="glitch-bg"></div>
+    <div class="binary-rain" id="binaryRain"></div>
+
+
+    <div class="container">
+        </head>
+
+        <div class="scanlines"></div>
+        <div class="noise"></div>
+
+        <header class="header">
+            <h1 class="title" data-text="LUIS KILMER">Luis Kilmer</h1>
+            <p class="subtitle">"I try to do everything, but I fail completely"</p>
+        </header>
+
+
+        <main class="links-grid">
+
+            <a href="#" class="link-card" target="_blank">
+                <div class="icon" style="color: var(--neon-blue);">
+                    <i class="fas fa-newspaper"></i>
+                </div>
+                <div class="link-info">
+                    <h3 style="color: var(--neon-blue);">Substack</h3>
+                    <p>Artigos e insights sobre seja lá qual for meu hiperfoco</p>
+                    <div class="binary-code">01110011 01110101 01100010 01110011 </div>
+                </div>
+            </a>
+
+            <!-- YouTube Profissional -->
+            <a href="#" class="link-card" target="_blank">
+                <div class="icon" style="color: var(--neon-pink);">
+                    <i class="fab fa-youtube"></i>
+                </div>
+                <div class="link-info">
+                    <h3 style="color: var(--neon-pink);">YouTube Profissional</h3>
+                    <p>Conteúdo técnico e profissional, conteúdo "sério"</p>
+                    <div class="binary-code">01110111 01101111 01110010 01101011</div>
+                </div>
+            </a>
+
+            <!-- YouTube Pessoal -->
+            <a href="#" class="link-card" target="_blank">
+                <div class="icon" style="color: var(--neon-green);">
+                    <i class="fab fa-youtube"></i>
+                </div>
+                <div class="link-info">
+                    <h3 style="color: var(--neon-green);">YouTube Pessoal</h3>
+                    <p>TDAH cansa minha mente, mas é legal de se assistir</p>
+                    <div class="binary-code">01110110 01101100 01101111 01100111 </div>
+                </div>
+            </a>
+
+            <!-- Instagram -->
+            <a href="#" class="link-card" target="_blank">
+                <div class="icon" style="color: var(--neon-purple);">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <div class="link-info">
+                    <h3 style="color: var(--neon-purple);">Instagram</h3>
+                    <p>Raramente uso, restrito e pessoal</p>
+                    <div class="binary-code">01110011 01100101 01101100 01100110</div>
+                </div>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="#" class="link-card" target="_blank">
+                <div class="icon" style="color: var(--neon-blue);">
+                    <i class="fab fa-linkedin"></i>
+                </div>
+                <div class="link-info">
+                    <h3 style="color: var(--neon-blue);">LinkedIn</h3>
+                    <p>Carreira e networking profissional</p>
+                    <div class="binary-code">01101010 01101111 01100010 01110011</div>
+                </div>
+            </a>
+
+            <!-- GitLab -->
+            <a href="#" class="link-card" target="_blank">
+                <div class="icon" style="color: var(--neon-green);">
+                    <i class="fab fa-gitlab"></i>
+                </div>
+                <div class="link-info">
+                    <h3 style="color: var(--neon-green);">GitLab</h3>
+                    <p>Projetos privados, experimentos e testes</p>
+                    <div class="binary-code">01100011 01101111 01100100 01100101</div>
+                </div>
+            </a>
+
+            <!-- GitHub -->
+            <a href="#" class="link-card" target="_blank">
+                <div class="icon" style="color: var(--neon-pink);">
+                    <i class="fab fa-github"></i>
+                </div>
+                <div class="link-info">
+                    <h3 style="color: var(--neon-pink);">GitHub</h3>
+                    <p>Projetos open source e colaborações</p>
+                    <div class="binary-code">01100100 01100101 01110110 01110011</div>
+                </div>
+            </a>
+
+            <!-- BandLab -->
+            <a href="#" class="link-card" target="_blank">
+                <div class="icon" style="color: var(--neon-purple);">
+                    <i class="fas fa-music"></i>
+                </div>
+                <div class="link-info">
+                    <h3 style="color: var(--neon-purple);">BandLab</h3>
+                    <p>Produções musicais e experimentos músicais</p>
+                    <div class="binary-code">01100010 01100101 01100001 01110100</div>
+                </div>
+            </a>
+        </main>
+
+        <footer class="footer">
+            <p>© 2025 Luis Kilmer - Todos os direitos reservados</p>
+        </footer>
+
     </div>
-    <div
-        class="cursor-outline fixed w-8 h-8 border border-black rounded-full pointer-events-none z-50 transform -translate-x-1/2 -translate-y-1/2 mix-blend-difference transition-all duration-150">
-    </div>
-
-    <header
-        class="fixed top-0 w-full bg-white/90 backdrop-blur-sm z-40 border-b border-gray-200 transition-all duration-300">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="logo text-2xl font-bold tracking-wider animate-slide-down">LuK</div>
-            <ul class="flex space-x-8">
-                <li><a href="#projetos"
-                        class="hover:text-gray-600 transition-all duration-300 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-black after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full">Projetos</a>
-                </li>
-                <li><a href="#skills"
-                        class="hover:text-gray-600 transition-all duration-300 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-black after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full">Skills</a>
-                </li>
-                <li><a href="#contato"
-                        class="hover:text-gray-600 transition-all duration-300 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-black after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full">Contato</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section
-            class="hero min-h-screen flex flex-col justify-center items-center text-center px-4 relative overflow-hidden">
-            <div class="absolute inset-0 grid-pattern opacity-10"></div>
-            <div class="max-w-4xl mx-auto z-10">
-                <h1 class="text-5xl md:text-7xl font-bold mb-6 animate-slide-up">Luis Kilmer</h1>
-                <div class="text-xl md:text-2xl max-w-2xl mx-auto mb-10 text-gray-700 font-light">
-                    Troublemaker and problem solver
-                </div>
-                <a href="#projetos"
-                    class="cta-button bg-black text-white px-8 py-4 rounded-lg hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2 animate-pulse-slow">
-                    <span>Veja meu trabalho</span>
-                    <i class="fas fa-arrow-down text-sm"></i>
-                </a>
-            </div>
-            <div class="scroll-indicator"></div>
-        </section>
-
-        <section id="projetos" class="py-24 bg-gray-50 relative overflow-hidden">
-            <div class="absolute -top-24 -right-24 w-48 h-48 bg-black rounded-full opacity-5 animate-float"></div>
-            <div class="absolute -bottom-24 -left-24 w-48 h-48 bg-black rounded-full opacity-5 animate-float"
-                style="animation-delay: 2s;"></div>
-
-            <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold text-center mb-4 animate-fade-in">Projetos</h2>
-                <p class="text-center text-gray-600 max-w-2xl mx-auto mb-16 animate-fade-in">Uma seleção dos meus
-                    trabalhos mais recentes e significativos</p>
-
-                <div class="projects-grid grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-                    <div
-                        class="project-card bg-white p-8 rounded-xl border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 group">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-2xl font-bold group-hover:gradient-text transition-all duration-300">Cluster
-                                Hadoop Analytics</h3>
-                            <i
-                                class="fas fa-external-link-alt text-gray-400 group-hover:text-black transition-colors"></i>
-                        </div>
-                        <p class="text-gray-700 mb-6">Sistema de análise de dados em larga escala para processamento de
-                            big data com visualizações interativas.</p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span
-                                class="project-tag bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm hover:bg-black hover:text-white transition-all duration-300 cursor-default">Hadoop</span>
-                            <span
-                                class="project-tag bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm hover:bg-black hover:text-white transition-all duration-300 cursor-default">Spark</span>
-                            <span
-                                class="project-tag bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm hover:bg-black hover:text-white transition-all duration-300 cursor-default">Hive</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="transition-delay: 0.3s;"></div>
-                        </div>
-                    </div>
-
-                    <div
-                        class="project-card bg-white p-8 rounded-xl border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 group">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-2xl font-bold group-hover:gradient-text transition-all duration-300">Cluster
-                                Hadoop Analytics</h3>
-                                <a href="./pages/project1.html">
-                                    <i
-                                        class="fas fa-external-link-alt text-gray-400 group-hover:text-black transition-colors"></i>
-
-                                </a>
-                        </div>
-                        <p class="text-gray-700 mb-6">Sistema de análise de dados em larga escala para processamento de
-                            big data com visualizações interativas.</p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span
-                                class="project-tag bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm hover:bg-black hover:text-white transition-all duration-300 cursor-default">Hadoop</span>
-                            <span
-                                class="project-tag bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm hover:bg-black hover:text-white transition-all duration-300 cursor-default">Spark</span>
-                            <span
-                                class="project-tag bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm hover:bg-black hover:text-white transition-all duration-300 cursor-default">Hive</span>
-                            
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="transition-delay: 0.3s;"></div>
-                        </div>
-                    </div>
-
-                    <div
-                        class="project-card bg-white p-8 rounded-xl border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 group">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-2xl font-bold group-hover:gradient-text transition-all duration-300">Cluster
-                                Hadoop Analytics</h3>
-                            <i
-                                class="fas fa-external-link-alt text-gray-400 group-hover:text-black transition-colors"></i>
-                        </div>
-                        <p class="text-gray-700 mb-6">Sistema de análise de dados em larga escala para processamento de
-                            big data com visualizações interativas.</p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span
-                                class="project-tag bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm hover:bg-black hover:text-white transition-all duration-300 cursor-default">Hadoop</span>
-                            <span
-                                class="project-tag bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm hover:bg-black hover:text-white transition-all duration-300 cursor-default">Spark</span>
-                            <span
-                                class="project-tag bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm hover:bg-black hover:text-white transition-all duration-300 cursor-default">Hive</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="transition-delay: 0.3s;"></div>
-                        </div>
-                    </div>
-
-                    <div
-                        class="project-card bg-white p-8 rounded-xl border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 group">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-2xl font-bold group-hover:gradient-text transition-all duration-300">Cluster
-                                Hadoop Analytics</h3>
-                            <i
-                                class="fas fa-external-link-alt text-gray-400 group-hover:text-black transition-colors"></i>
-                        </div>
-                        <p class="text-gray-700 mb-6">Sistema de análise de dados em larga escala para processamento de
-                            big data com visualizações interativas.</p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span
-                                class="project-tag bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm hover:bg-black hover:text-white transition-all duration-300 cursor-default">Hadoop</span>
-                            <span
-                                class="project-tag bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm hover:bg-black hover:text-white transition-all duration-300 cursor-default">Spark</span>
-                            <span
-                                class="project-tag bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm hover:bg-black hover:text-white transition-all duration-300 cursor-default">Hive</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="transition-delay: 0.3s;"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="text-center mt-12">
-                    <a href="#"
-                        class="inline-flex items-center gap-2 bg-black text-white px-8 py-4 rounded-lg hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 group">
-                        <span>Ver mais projetos</span>
-                        <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform duration-300"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section id="skills" class="py-24 relative overflow-hidden">
-            <div
-                class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-black to-transparent opacity-20">
-            </div>
-
-            <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold text-center mb-4 animate-fade-in">Skills</h2>
-                <p class="text-center text-gray-600 max-w-2xl mx-auto mb-16 animate-fade-in">Tecnologias e ferramentas
-                    que normalmente eu utilizo</p>
-
-                <div class="skills grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-                    <div
-                        class="skill-item bg-white p-8 rounded-xl border border-gray-200 text-center group hover:shadow-lg transition-all duration-500 transform hover:-translate-y-2">
-                        <div
-                            class="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                            <i class="fas fa-code text-white text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-4">Frontend</h3>
-                        <p class="text-gray-700">HTML5, CSS3, JavaScript, React, Vue, Tailwind</p>
-                    </div>
-
-                    <div
-                        class="skill-item bg-white p-8 rounded-xl border border-gray-200 text-center group hover:shadow-lg transition-all duration-500 transform hover:-translate-y-2">
-                        <div
-                            class="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                            <i class="fas fa-server text-white text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-4">Backend</h3>
-                        <p class="text-gray-700">Django, Spring, Node.js, Go, PostgreSQL, MongoDB</p>
-                    </div>
-
-                    <div
-                        class="skill-item bg-white p-8 rounded-xl border border-gray-200 text-center group hover:shadow-lg transition-all duration-500 transform hover:-translate-y-2">
-                        <div
-                            class="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                            <i class="fas fa-tools text-white text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-4">Ferramentas</h3>
-                        <p class="text-gray-700">Git, Docker, Webpack, Figma, VS Code, DevTools</p>
-                    </div>
-
-                    <div
-                        class="skill-item bg-white p-8 rounded-xl border border-gray-200 text-center group hover:shadow-lg transition-all duration-500 transform hover:-translate-y-2">
-                        <div
-                            class="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                            <i class="fas fa-palette text-white text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-4">Design</h3>
-                        <p class="text-gray-700">UI/UX Design, Design Thinking, Acessibilidade, Prototipagem</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contato" class="py-24 bg-gray-50 relative overflow-hidden">
-            <div
-                class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-black to-transparent opacity-20">
-            </div>
-            <div class="absolute -bottom-32 -right-32 w-64 h-64 bg-black rounded-full opacity-5 animate-float"></div>
-
-            <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold text-center mb-4 animate-fade-in">Contato</h2>
-                <p class="text-center text-gray-600 max-w-2xl mx-auto mb-16 animate-fade-in">Entre em contato comigo
-                    para discutir ou reclamar de algo</p>
-
-                <div
-                    class="contact-content max-w-4xl mx-auto bg-white rounded-2xl border border-gray-200 p-12 shadow-sm">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                        <div>
-                            <h3 class="text-2xl font-bold mb-6">Vamos conversar</h3>
-                            <p class="text-gray-700 mb-8">Estou sempre aberto a discutir novos projetos, ideias
-                                criativas e fazer muito money money money bitch.</p>
-
-                            <div class="space-y-4">
-                                <!-- <div class="flex items-center gap-4">
-                                    <div class="w-10 h-10 bg-black rounded-full flex items-center justify-center">
-                                        <i class="fas fa-envelope text-white"></i>
-                                    </div>
-                                    <div>
-                                        <p class="font-medium">Email</p>
-                                        <p class="text-gray-600">contato@luiskilmer.com</p>
-                                    </div>
-                                </div>
-
-                                <div class="flex items-center gap-4">
-                                    <div class="w-10 h-10 bg-black rounded-full flex items-center justify-center">
-                                        <i class="fas fa-phone text-white"></i>
-                                    </div>
-                                    <div>
-                                        <p class="font-medium">Telefone</p>
-                                        <p class="text-gray-600">+55 (11) 99999-9999</p>
-                                    </div>
-                                </div> -->
-
-                                <div class="flex items-center gap-4">
-                                    <div class="w-10 h-10 bg-black rounded-full flex items-center justify-center">
-                                        <i class="fas fa-map-marker-alt text-white"></i>
-                                    </div>
-                                    <div>
-                                        <p class="font-medium">Localização</p>
-                                        <p class="text-gray-600">João Pessoa, Paraíba</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <h3 class="text-2xl font-bold mb-6">Redes Sociais</h3>
-                            <div class="social-links grid grid-cols-2 gap-4">
-                                <a href="#"
-                                    class="bg-black text-white p-4 rounded-lg hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
-                                    <i class="fab fa-linkedin-in"></i>
-                                    <span>LinkedIn</span>
-                                </a>
-                                <a href="#"
-                                    class="bg-black text-white p-4 rounded-lg hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
-                                    <i class="fab fa-github"></i>
-                                    <span>GitHub</span>
-                                </a>
-                                <a href="#"
-                                    class="bg-black text-white p-4 rounded-lg hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
-                                    <i class="fab fa-gitlab"></i>
-                                    <span>GitLab</span>
-                                </a>
-                                <a href="#"
-                                    class="bg-black text-white p-4 rounded-lg hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
-                                    <i class="fa-solid fa-book"></i>
-                                    <span>SubStack</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="bg-black text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-6 md:mb-0">
-                    <div class="logo text-2xl font-bold tracking-wider mb-2">LuK</div>
-                    <p class="text-gray-400">Desenvolvedor Full Stack & Designer</p>
-                </div>
-
-                <div class="flex space-x-6">
-                    <a href="https://www.linkedin.com/in/luis-kilmer/" class="text-gray-400 hover:text-white transition-colors duration-300">
-                        <i class="fab fa-linkedin-in text-xl"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
-                        <i class="fab fa-github text-xl"></i>
-                    </a>
-                    <a href="https://www.instagram.com/luiskillmer/" class="text-gray-400 hover:text-white transition-colors duration-300">
-                        <i class="fab fa-instagram text-xl"></i>
-                    </a>
-                    <a href="https://luiskilmer.substack.com/publish/home" class="text-gray-400 hover:text-white transition-colors duration-300">
-                        <i class="fa-solid fa-book text-xl"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
-                <p>&copy; 2025 Luis Kilmer. Todos os direitos reservados.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="src/main.js">
-        
-    </script>
 </body>
 
 </html>
