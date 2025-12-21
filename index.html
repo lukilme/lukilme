@@ -1,138 +1,416 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Linktree</title>
+    <title>LinkTree</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="./src/main.css">
-    <script src="src/main.js"></script>
+    <style>
+        :root {
+            --primary: #6c00ff;
+            --secondary: #00d9ff;
+            --accent: #ff00cc;
+            --dark: #0a001a;
+            --light: #f5f5ff;
+            --glass: rgba(255, 255, 255, 0.08);
+            --shadow: 0 8px 32px rgba(106, 0, 255, 0.2);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--dark) 0%, #1a0033 100%);
+            color: var(--light);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(108, 0, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(0, 217, 255, 0.1) 0%, transparent 50%);
+            z-index: -1;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            border-radius: 24px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+        }
+
+        .profile {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .avatar {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            border: 4px solid var(--primary);
+            padding: 5px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 25px rgba(108, 0, 255, 0.5);
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            background: var(--dark);
+        }
+
+        .name {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: 1px;
+        }
+
+        .bio {
+            font-size: 16px;
+            color: #ccc;
+            line-height: 1.5;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            margin-bottom: 30px;
+        }
+
+        .link-item {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 18px 22px;
+            text-decoration: none;
+            color: white;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .link-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.7s ease;
+        }
+
+        .link-item:hover::before {
+            left: 100%;
+        }
+
+        .link-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            border-color: rgba(108, 0, 255, 0.3);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .link-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 18px;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        .linkedin .link-icon { background: rgba(0, 119, 181, 0.2); color: #0077b5; }
+        .github .link-icon { background: rgba(24, 23, 23, 0.2); color: #f5f5f5; }
+        .youtube .link-icon { background: rgba(255, 0, 0, 0.2); color: #ff0000; }
+        .instagram .link-icon { background: rgba(225, 48, 108, 0.2); color: #e1306c; }
+        .bandlab .link-icon { background: rgba(254, 129, 0, 0.2); color: #fe8100; }
+
+        .link-text {
+            flex-grow: 1;
+        }
+
+        .link-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .link-desc {
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        .footer {
+            text-align: center;
+            color: #888;
+            font-size: 14px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(108, 0, 255, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(108, 0, 255, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(108, 0, 255, 0); }
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .card {
+                padding: 25px 20px;
+                border-radius: 20px;
+            }
+            
+            .avatar {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .name {
+                font-size: 24px;
+            }
+            
+            .link-item {
+                padding: 16px 18px;
+            }
+            
+            .link-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 22px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                padding: 20px 15px;
+            }
+            
+            .avatar {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .name {
+                font-size: 22px;
+            }
+            
+            .bio {
+                font-size: 15px;
+            }
+            
+            .link-item {
+                padding: 14px 16px;
+            }
+            
+            .link-icon {
+                width: 40px;
+                height: 40px;
+                margin-right: 15px;
+                font-size: 20px;
+            }
+            
+            .link-title {
+                font-size: 16px;
+            }
+            
+            .link-desc {
+                font-size: 13px;
+            }
+        }
+    </style>
 </head>
-
 <body>
-    <!-- Elementos de fundo animados -->
-    <div class="cyber-grid"></div>
-    <div class="scan-line"></div>
-    <div class="glitch-bg"></div>
-    <div class="binary-rain" id="binaryRain"></div>
-
-
     <div class="container">
-        </head>
+        <div class="card">
+            <div class="profile">
+                <div class="avatar pulse">
+                    <img src="https://media.licdn.com/dms/image/v2/D4D03AQF3HAE6-qRAXA/profile-displayphoto-shrink_200_200/B4DZTdSRhLHAAc-/0/1738879343138?e=1767830400&v=beta&t=KQuwPpJR9JUSQzOT_3cxfO92F4TL0SPcXjwoinYheK8" alt="Profile photo">
+                </div>
+                <h1 class="name">Luis Kilmer</h1>
+                <p class="bio">Trying to do everything and being good at nothing</p>
+            </div>
 
-        <div class="scanlines"></div>
-        <div class="noise"></div>
+            <div class="links">
+                <a href="https://www.linkedin.com/in/luis-kilmer/" target="_blank" class="link-item linkedin">
+                    <div class="link-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <div class="link-text">
+                        <div class="link-title">LinkedIn</div>
+                        <div class="link-desc">Professional networking</div>
+                    </div>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
 
-        <header class="header">
-            <h1 class="title" data-text="LUIS KILMER">Luis Kilmer</h1>
-            <p class="subtitle">"I try to do everything, but I fail completely"</p>
-        </header>
+                <a href="https://github.com/lukilme" target="_blank" class="link-item github">
+                    <div class="link-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <div class="link-text">
+                        <div class="link-title">GitHub</div>
+                        <div class="link-desc">Check out my projects and contributions</div>
+                    </div>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
 
+                <a href="https://www.youtube.com/@luiskilmer" target="_blank" class="link-item youtube">
+                    <div class="link-icon">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <div class="link-text">
+                        <div class="link-title">YouTube</div>
+                        <div class="link-desc">Understood or should I draw it?</div>
+                    </div>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
 
-        <main class="links-grid">
+                <a href="https://www.instagram.com/luiskillmer/" target="_blank" class="link-item instagram">
+                    <div class="link-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <div class="link-text">
+                        <div class="link-title">Instagram</div>
+                        <div class="link-desc">Meh... it's necessary, right?</div>
+                    </div>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
 
-            <a href="#" class="link-card" target="_blank">
-                <div class="icon" style="color: var(--neon-blue);">
-                    <i class="fas fa-newspaper"></i>
-                </div>
-                <div class="link-info">
-                    <h3 style="color: var(--neon-blue);">Substack</h3>
-                    <p>Artigos e insights sobre seja lá qual for meu hiperfoco</p>
-                    <div class="binary-code">01110011 01110101 01100010 01110011 </div>
-                </div>
-            </a>
+                <a href="https://www.bandlab.com/schizopaths" target="_blank" class="link-item bandlab">
+                    <div class="link-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <div class="link-text">
+                        <div class="link-title">BandLab</div>
+                        <div class="link-desc">My music creations</div>
+                    </div>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
 
-            <!-- YouTube Profissional -->
-            <a href="#" class="link-card" target="_blank">
-                <div class="icon" style="color: var(--neon-pink);">
-                    <i class="fab fa-youtube"></i>
-                </div>
-                <div class="link-info">
-                    <h3 style="color: var(--neon-pink);">YouTube Profissional</h3>
-                    <p>Conteúdo técnico e profissional, conteúdo "sério"</p>
-                    <div class="binary-code">01110111 01101111 01110010 01101011</div>
-                </div>
-            </a>
-
-            <!-- YouTube Pessoal -->
-            <a href="#" class="link-card" target="_blank">
-                <div class="icon" style="color: var(--neon-green);">
-                    <i class="fab fa-youtube"></i>
-                </div>
-                <div class="link-info">
-                    <h3 style="color: var(--neon-green);">YouTube Pessoal</h3>
-                    <p>TDAH cansa minha mente, mas é legal de se assistir</p>
-                    <div class="binary-code">01110110 01101100 01101111 01100111 </div>
-                </div>
-            </a>
-
-            <!-- Instagram -->
-            <a href="#" class="link-card" target="_blank">
-                <div class="icon" style="color: var(--neon-purple);">
-                    <i class="fab fa-instagram"></i>
-                </div>
-                <div class="link-info">
-                    <h3 style="color: var(--neon-purple);">Instagram</h3>
-                    <p>Raramente uso, restrito e pessoal</p>
-                    <div class="binary-code">01110011 01100101 01101100 01100110</div>
-                </div>
-            </a>
-
-            <!-- LinkedIn -->
-            <a href="#" class="link-card" target="_blank">
-                <div class="icon" style="color: var(--neon-blue);">
-                    <i class="fab fa-linkedin"></i>
-                </div>
-                <div class="link-info">
-                    <h3 style="color: var(--neon-blue);">LinkedIn</h3>
-                    <p>Carreira e networking profissional</p>
-                    <div class="binary-code">01101010 01101111 01100010 01110011</div>
-                </div>
-            </a>
-
-            <!-- GitLab -->
-            <a href="#" class="link-card" target="_blank">
-                <div class="icon" style="color: var(--neon-green);">
-                    <i class="fab fa-gitlab"></i>
-                </div>
-                <div class="link-info">
-                    <h3 style="color: var(--neon-green);">GitLab</h3>
-                    <p>Projetos privados, experimentos e testes</p>
-                    <div class="binary-code">01100011 01101111 01100100 01100101</div>
-                </div>
-            </a>
-
-            <!-- GitHub -->
-            <a href="#" class="link-card" target="_blank">
-                <div class="icon" style="color: var(--neon-pink);">
-                    <i class="fab fa-github"></i>
-                </div>
-                <div class="link-info">
-                    <h3 style="color: var(--neon-pink);">GitHub</h3>
-                    <p>Projetos open source e colaborações</p>
-                    <div class="binary-code">01100100 01100101 01110110 01110011</div>
-                </div>
-            </a>
-
-            <!-- BandLab -->
-            <a href="#" class="link-card" target="_blank">
-                <div class="icon" style="color: var(--neon-purple);">
-                    <i class="fas fa-music"></i>
-                </div>
-                <div class="link-info">
-                    <h3 style="color: var(--neon-purple);">BandLab</h3>
-                    <p>Produções musicais e experimentos músicais</p>
-                    <div class="binary-code">01100010 01100101 01100001 01110100</div>
-                </div>
-            </a>
-        </main>
-
-        <footer class="footer">
-            <p>© 2025 Luis Kilmer - Todos os direitos reservados</p>
-        </footer>
-
+            <div class="footer">
+                <p>© 2025 LinkTree | made with <i class="fas fa-heart" style="color: var(--accent);"></i></p>
+            </div>
+        </div>
     </div>
-</body>
 
+    <script>
+        // Add typing effect to the name
+        document.addEventListener('DOMContentLoaded', function() {
+            const nameElement = document.querySelector('.name');
+            const originalText = nameElement.textContent;
+            nameElement.textContent = '';
+            
+            let i = 0;
+            function typeWriter() {
+                if (i < originalText.length) {
+                    nameElement.textContent += originalText.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 100);
+                }
+            }
+            
+            // Start animation after a short delay
+            setTimeout(typeWriter, 500);
+            
+            // Add interactivity to links
+            const links = document.querySelectorAll('.link-item');
+            links.forEach(link => {
+                link.addEventListener('mouseenter', function() {
+                    this.querySelector('.fa-arrow-right').style.transform = 'translateX(5px)';
+                });
+                
+                link.addEventListener('mouseleave', function() {
+                    this.querySelector('.fa-arrow-right').style.transform = 'translateX(0)';
+                });
+            });
+            
+            // Particle effect on background (simplified)
+            const body = document.querySelector('body');
+            for (let i = 0; i < 20; i++) {
+                const particle = document.createElement('div');
+                particle.style.position = 'absolute';
+                particle.style.width = Math.random() * 4 + 1 + 'px';
+                particle.style.height = particle.style.width;
+                particle.style.background = `rgba(${Math.random() * 100 + 155}, ${Math.random() * 100 + 155}, 255, ${Math.random() * 0.5 + 0.1})`;
+                particle.style.borderRadius = '50%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.zIndex = '-1';
+                body.appendChild(particle);
+            }
+        });
+    </script>
+</body>
 </html>
